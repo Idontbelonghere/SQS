@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
+      
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/bootstrap/bootstrap.min.js")
+    script(src="/javascripts/index.js")
+  body
+    include header        
+    .container
+      .col-md-4.col-sm-4#inputBox
+        .scoreInput
+          select
+            option 数学
+            option 英语
+            
+          .input-group
+            span.input-group-addon#studentId 学号
+            input(type="text",area-describedby="studentId").form-control
+          .input-group
+            span.input-group-addon#studentName 姓名
+            input(type="text",area-describedby="studentName").form-control
+            
+          .input-group
+            span.input-group-addon#totalScore 总分
+            input(type="text",area-describedby="totalScore").form-control
+            
+          .input-group
+            span.input-group-addon#hearingScore 听力
+            input(type="text",area-describedby="hearingScore").form-control
+          .input-group
+            span.input-group-addon#readingScore 阅读
+            input(type="text",area-describedby="readingScore").form-control
+          .input-group
+            span.input-group-addon#writingScore 写作
+            input(type="text",area-describedby="writingScore").form-control
+            
+        button.btn.btn-success(type="button")#saveScore 存储

@@ -1,0 +1,7 @@
+{
+	"apps":[{
+		"name":"SQS",
+		"script":"bin/www",
+		"watch":["bin/www","app.js","./routes"]
+		}]
+}

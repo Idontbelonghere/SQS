@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    title Introduction
+    link(rel="stylesheet", href="/stylesheets/bootstrap/bootstrap.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/bootstrap/bootstrap.min.js")
+    script(src="/javascripts/intro.js")
+
+  body
+    include header
+    .jumbotron
+      .container
+        h1 Score Query System
+        p 成绩查询系统
+        p
+          button.btn.btn-primary.btn-lg(data-toggle='modal',data-target='#signModal', role="button") Sign Up »
+          
+  .modal.fade(tabindex="-1",role="dialog")#signModal
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button',data-dismiss='modal',aria-label='close')
+            span(aria-hidden='true') &times;
+          h4.modal-title Sign Up
+        .modal-body
+          #signUp-box
+            form
+              .form-group
+                label(for="username") User Name
+                input#username.form-control(type="text",autofocus)
+              .form-group
+                label(for="inputEmail") Email
+                input#inputEmail.form-control(type="email",autofocus)
+                div#validateEmail
+              .form-group
+                label(for="pw") Password
+                input#pw.form-control(type="password")
+              .form-group
+                label(for="pw_confirm") Confirm Password
+                input#pw_confirm.form-control(type="password")
+              .form-group
+                label(for="invitationCode") Invitation Code
+                input#invitationCode.form-control(type="text")
+
+              button(type="button")#signupBtn.btn.btn-success.btn-block Sign up for SQS
+
+  .container
+    .row
+      .col-md-4
+        h2 HEAD2
+        p ppppppppp
+        p
+          a.btn.btn-default(href="#", role="button") View details »
+
+      .col-md-4
+        h2 HEAD2
+        p pppppppp
+        p
+          a.btn.btn-default(href="#", role="button") View details »
+
+      .col-md-4
+        h2 HEAD2
+        p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor
+        p
+          a.btn.btn-default(href="#", role="button") View details »
+
+    hr
+
+    footer
+      p  @2015-2017 Kris.

@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/search.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
+      
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/bootstrap/bootstrap.min.js")
+    script(src="/javascripts/search.js")
+  body
+    include header
+          
+    .container
+      .row
+        .col-md-4.col-sm-4
+          .scoreSearch
+            .input-group
+              span.input-group-addon#studentId 学号
+              input(type="text",area-describedby="studentId",placeholder="which_class-which_number").form-control
+              span.input-group-btn
+                button.btn.btn-success(type="button")#searchScore 搜索
+            //- .input-group
+            //-   span.input-group-addon#class 班级
+            //-   input(type="text",area-describedby="class",placeholder="").form-control
+            //-   span.input-group-addon#testNumber 第
+            //-   input(type="text",area-describedby="testNumber",placeholder="1").form-control
+            //-   span.input-group-addon 次考试
+            //-   span.input-group-btn
+            //-     button.btn.btn-success(type="button")#searchScore 搜索
+  
+      .row#resultRow
+        .col-md-6.col-sm-6
+          .panel.panel-primary
+            .panel-heading 查询结果
+            .panel-body
+              table.table.table-striped
+                thead
+                  tr
+                    th #
+                    th 姓名
+                    th 学号
+                    th 总分
+                    th 听力
+                    th 阅读
+                    th 写作
+                tbody#resultTables
+                  
+         
+      
